@@ -1,10 +1,15 @@
 /******************
  * YOUR CODE HERE *
  ******************/
-function slice(str , arr = []   ){
-  
-
-
+function slice(string, start = 0, end = '') {
+  let out = "";
+  if(end === '') {
+    end = string.length;
+  }
+  for(let i = start; i < Math.min(string.length, end); i++) {
+    out += string[i];
+  }
+  return out;
 }
 
 
